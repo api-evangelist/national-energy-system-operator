@@ -1,0 +1,207 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NESO Data Portal API",
+    "version": "3"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Discovery",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List data groups",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.neso.energy/api/3/action/organization_list"
+          },
+          "docs": "Returns a list of all data groups (CKAN organizations) on the NESO Data Portal."
+        },
+        {
+          "info": {
+            "name": "List datasets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.neso.energy/api/3/action/package_list"
+          },
+          "docs": "Returns a list of all datasets (CKAN packages) on the NESO Data Portal."
+        },
+        {
+          "info": {
+            "name": "List tags",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.neso.energy/api/3/action/tag_list"
+          },
+          "docs": "Returns a list of available tags on the NESO Data Portal."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Search",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search datasets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.neso.energy/api/3/action/package_search",
+            "params": [
+              {
+                "name": "q",
+                "value": "",
+                "type": "query",
+                "description": "Search query string."
+              }
+            ]
+          },
+          "docs": "Searches datasets by query criteria."
+        },
+        {
+          "info": {
+            "name": "Search resources",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.neso.energy/api/3/action/resource_search",
+            "params": [
+              {
+                "name": "q",
+                "value": "",
+                "type": "query",
+                "description": "Search query string."
+              }
+            ]
+          },
+          "docs": "Searches data files (resources) by query criteria."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Metadata",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Show dataset",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.neso.energy/api/3/action/package_show",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "query",
+                "description": "Dataset identifier or slug."
+              }
+            ]
+          },
+          "docs": "Returns the details of a single dataset."
+        },
+        {
+          "info": {
+            "name": "Show resource",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.neso.energy/api/3/action/resource_show",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "query",
+                "description": "Resource identifier (UUID)."
+              }
+            ]
+          },
+          "docs": "Returns metadata for a single resource, including modification date for change-detection."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Datastore",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Query tabular data",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.neso.energy/api/3/action/datastore_search",
+            "params": [
+              {
+                "name": "resource_id",
+                "value": "",
+                "type": "query",
+                "description": "Resource identifier whose datastore is being queried."
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of records to return."
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "Offset into the result set."
+              },
+              {
+                "name": "q",
+                "value": "",
+                "type": "query",
+                "description": "Free-text query against indexed fields."
+              }
+            ]
+          },
+          "docs": "Queries the datastore for tabular records with optional filters and pagination."
+        },
+        {
+          "info": {
+            "name": "Query datastore via SQL",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.neso.energy/api/3/action/datastore_search_sql",
+            "params": [
+              {
+                "name": "sql",
+                "value": "",
+                "type": "query",
+                "description": "PostgreSQL-syntax SQL query."
+              }
+            ]
+          },
+          "docs": "Queries the datastore using PostgreSQL syntax. Field IDs and Resource IDs must be enclosed in double quotes."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

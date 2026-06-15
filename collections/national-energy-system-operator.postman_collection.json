@@ -1,0 +1,797 @@
+{
+  "item": [
+    {
+      "id": "52748eba-a0ad-44e3-bc50-a9e64ea38b21",
+      "name": "Discovery",
+      "description": {
+        "content": "Discovery endpoints for organizations, datasets, and tags.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f9f2a27c-159e-4cf2-8023-7221c8d1582a",
+          "name": "List data groups",
+          "request": {
+            "name": "List data groups",
+            "description": {
+              "content": "Returns a list of all data groups (CKAN organizations) on the NESO Data Portal.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "organization_list"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d6ee3cd7-b100-4417-bb1d-b3092b85206b",
+              "name": "List of organizations.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "organization_list"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"help\": \"string\",\n  \"success\": false,\n  \"result\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f30c0523-418d-4bab-8ea2-7eb6ca58a240",
+          "name": "List datasets",
+          "request": {
+            "name": "List datasets",
+            "description": {
+              "content": "Returns a list of all datasets (CKAN packages) on the NESO Data Portal.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "package_list"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5ad2dbeb-aaad-4cb9-8bed-76c365b638e2",
+              "name": "List of dataset identifiers.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "package_list"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"help\": \"string\",\n  \"success\": false,\n  \"result\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e7175a59-9774-4378-ba1d-2968dd017e3e",
+          "name": "List tags",
+          "request": {
+            "name": "List tags",
+            "description": {
+              "content": "Returns a list of available tags on the NESO Data Portal.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "tag_list"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "cb2ad6a4-a121-430e-b938-1232309dc9a3",
+              "name": "List of tags.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tag_list"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"help\": \"string\",\n  \"success\": false,\n  \"result\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "acff4d7d-6ad8-4eec-b560-3cb81a346297",
+      "name": "Search",
+      "description": {
+        "content": "Search endpoints for datasets and resources.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "2142c24b-b077-4fc3-8e18-f103ac2f8e5a",
+          "name": "Search datasets",
+          "request": {
+            "name": "Search datasets",
+            "description": {
+              "content": "Searches datasets by query criteria.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "package_search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "q",
+                  "value": "<string>",
+                  "description": "(Required) Search query string."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d975c3db-9758-4c51-979d-a0cc7fa19645",
+              "name": "Matching datasets.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "package_search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"help\": \"string\",\n  \"success\": false,\n  \"result\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "04ad6f7c-bc02-493d-bd32-f8503b874a76",
+          "name": "Search resources",
+          "request": {
+            "name": "Search resources",
+            "description": {
+              "content": "Searches data files (resources) by query criteria.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "resource_search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "q",
+                  "value": "<string>",
+                  "description": "(Required) Search query string."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8a46b485-17ad-4320-82ab-226af84db924",
+              "name": "Matching resources.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "resource_search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"help\": \"string\",\n  \"success\": false,\n  \"result\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "8e23dc3b-6d94-473f-a21c-2780462e18a4",
+      "name": "Metadata",
+      "description": {
+        "content": "Retrieve metadata for datasets and resources.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4f2f0198-a5d7-46da-ba9d-21abe3626f93",
+          "name": "Show dataset",
+          "request": {
+            "name": "Show dataset",
+            "description": {
+              "content": "Returns the details of a single dataset.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "package_show"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "<string>",
+                  "description": "(Required) Dataset identifier or slug."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "11580036-55ac-4d93-8025-5ec0d28b9e27",
+              "name": "Dataset details.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "package_show"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"help\": \"string\",\n  \"success\": false,\n  \"result\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "57e3e79e-2fb5-410e-ad67-1664b40351dd",
+          "name": "Show resource",
+          "request": {
+            "name": "Show resource",
+            "description": {
+              "content": "Returns metadata for a single resource, including modification date for change-detection.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "resource_show"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "<string>",
+                  "description": "(Required) Resource identifier (UUID)."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3a0010a0-2b81-4ef7-9e06-518171659d70",
+              "name": "Resource metadata.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "resource_show"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"help\": \"string\",\n  \"success\": false,\n  \"result\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "c57cff03-8ba8-4173-8ca6-de738890d5a7",
+      "name": "Datastore",
+      "description": {
+        "content": "Query tabular data with filters or PostgreSQL-style SQL.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "d3cff1d3-1cc6-44cc-b788-acf93e780420",
+          "name": "Query tabular data",
+          "request": {
+            "name": "Query tabular data",
+            "description": {
+              "content": "Queries the datastore for tabular records with optional filters and pagination.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "datastore_search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "resource_id",
+                  "value": "<string>",
+                  "description": "(Required) Resource identifier whose datastore is being queried."
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "100",
+                  "description": "Maximum number of records to return."
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "0",
+                  "description": "Offset into the result set."
+                },
+                {
+                  "disabled": false,
+                  "key": "q",
+                  "value": "<string>",
+                  "description": "Free-text query against indexed fields."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "94e1d8f7-82cc-47d2-9144-6890b0f4a731",
+              "name": "Datastore records.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "datastore_search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "resource_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "100"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"help\": \"string\",\n  \"success\": false,\n  \"result\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d71935d8-d7c8-4695-ab4e-023219ffe1bf",
+          "name": "Query datastore via SQL",
+          "request": {
+            "name": "Query datastore via SQL",
+            "description": {
+              "content": "Queries the datastore using PostgreSQL syntax. Field IDs and Resource IDs must be enclosed in double quotes.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "datastore_search_sql"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "sql",
+                  "value": "<string>",
+                  "description": "(Required) PostgreSQL-syntax SQL query."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "75d29df1-2bd4-4f3c-bbb6-269e5a245cde",
+              "name": "SQL query results.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "datastore_search_sql"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "sql",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"help\": \"string\",\n  \"success\": false,\n  \"result\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.neso.energy/api/3/action",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "1337c815-ffad-4089-8cf8-0eb92f8ac22e",
+    "name": "NESO Data Portal API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The National Energy System Operator (NESO) Data Portal API is a CKAN v3 API providing programmatic access to NESO datasets including wind forecasts, demand predictions, balancing services, transmission constraints, and other UK energy system data. Rate limits: maximum 1 request per second for the CKAN API and 2 requests per minute for the Datastore API.\n\nContact Support:\n Name: NESO Data Portal",
+      "type": "text/plain"
+    }
+  }
+}
