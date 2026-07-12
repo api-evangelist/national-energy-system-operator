@@ -39,6 +39,10 @@ apis:
       - type: Portal
         url: https://www.neso.energy/data-portal
 common:
+  - type: VulnerabilityDisclosure
+    url: security/national-energy-system-operator-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/national-energy-system-operator-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/neso-energy
   - type: Website
