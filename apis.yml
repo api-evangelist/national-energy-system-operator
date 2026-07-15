@@ -39,6 +39,8 @@ apis:
       - type: Portal
         url: https://www.neso.energy/data-portal
 common:
+  - type: AgenticAccess
+    url: agentic-access/national-energy-system-operator-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/national-energy-system-operator-vulnerability-disclosure.yml
   - type: DomainSecurity
