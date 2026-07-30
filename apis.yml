@@ -6,7 +6,19 @@ description: >-
   Portal, which exposes a CKAN v3 API for programmatic access to energy system data including wind forecasts, demand
   predictions, balancing services, and transmission constraints.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/national-energy-system-operator.png
 url: https://raw.githubusercontent.com/api-evangelist/national-energy-system-operator/refs/heads/main/apis.yml
 created: '2026-03-16'
 modified: '2026-05-19'
@@ -18,26 +30,62 @@ tags:
   - Open Data
   - United Kingdom
 apis:
-  - aid: national-energy-system-operator:data-portal-api
-    name: NESO Data Portal API
-    description: >-
-      CKAN v3 API for the NESO Data Portal providing programmatic access to datasets, resources, and tabular data
-      through search, metadata, and datastore endpoints.
-    humanURL: https://www.neso.energy/data-portal
-    baseURL: https://api.neso.energy/api/3/action/
-    tags:
-      - Energy
-      - CKAN
-      - Open Data
-      - Datasets
-    properties:
-      - type: Documentation
-        url: https://www.neso.energy/data-portal/api-guidance
-      - type: OpenAPI
-        url: >-
-          https://raw.githubusercontent.com/api-evangelist/national-energy-system-operator/main/openapi/national-energy-system-operator-openapi.json
-      - type: Portal
-        url: https://www.neso.energy/data-portal
+- aid: national-energy-system-operator:national-energy-system-operator-datastore-api
+  name: National Energy System Operator Datastore API
+  description: Query tabular data with filters or PostgreSQL-style SQL.
+  humanURL: https://www.neso.energy/data-portal
+  baseURL: https://api.neso.energy/api/3/action/
+  tags:
+  - Datastore
+  properties:
+  - type: OpenAPI
+    url: openapi/national-energy-system-operator-datastore-api-openapi.yml
+  - type: Documentation
+    url: https://www.neso.energy/data-portal/api-guidance
+  - type: Portal
+    url: https://www.neso.energy/data-portal
+- aid: national-energy-system-operator:national-energy-system-operator-discovery-api
+  name: National Energy System Operator Discovery API
+  description: Discovery endpoints for organizations, datasets, and tags.
+  humanURL: https://www.neso.energy/data-portal
+  baseURL: https://api.neso.energy/api/3/action/
+  tags:
+  - Discovery
+  properties:
+  - type: OpenAPI
+    url: openapi/national-energy-system-operator-discovery-api-openapi.yml
+  - type: Documentation
+    url: https://www.neso.energy/data-portal/api-guidance
+  - type: Portal
+    url: https://www.neso.energy/data-portal
+- aid: national-energy-system-operator:national-energy-system-operator-metadata-api
+  name: National Energy System Operator Metadata API
+  description: Retrieve metadata for datasets and resources.
+  humanURL: https://www.neso.energy/data-portal
+  baseURL: https://api.neso.energy/api/3/action/
+  tags:
+  - Metadata
+  properties:
+  - type: OpenAPI
+    url: openapi/national-energy-system-operator-metadata-api-openapi.yml
+  - type: Documentation
+    url: https://www.neso.energy/data-portal/api-guidance
+  - type: Portal
+    url: https://www.neso.energy/data-portal
+- aid: national-energy-system-operator:national-energy-system-operator-search-api
+  name: National Energy System Operator Search API
+  description: Search endpoints for datasets and resources.
+  humanURL: https://www.neso.energy/data-portal
+  baseURL: https://api.neso.energy/api/3/action/
+  tags:
+  - Search
+  properties:
+  - type: OpenAPI
+    url: openapi/national-energy-system-operator-search-api-openapi.yml
+  - type: Documentation
+    url: https://www.neso.energy/data-portal/api-guidance
+  - type: Portal
+    url: https://www.neso.energy/data-portal
 common:
   - type: AgenticAccess
     url: agentic-access/national-energy-system-operator-agentic-access.yml
