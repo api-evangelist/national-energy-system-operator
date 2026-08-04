@@ -1,0 +1,20 @@
+{
+  "provider": "national-energy-system-operator",
+  "sources": [
+    "national-energy-system-operator-datastore-api-openapi.yml",
+    "national-energy-system-operator-discovery-api-openapi.yml",
+    "national-energy-system-operator-metadata-api-openapi.yml",
+    "national-energy-system-operator-search-api-openapi.yml"
+  ],
+  "outputs": [
+    "national-energy-system-operator-datastore-api-openapi.yml",
+    "national-energy-system-operator-discovery-api-openapi.yml",
+    "national-energy-system-operator-metadata-api-openapi.yml",
+    "national-energy-system-operator-search-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
