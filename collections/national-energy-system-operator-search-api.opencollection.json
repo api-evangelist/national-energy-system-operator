@@ -1,0 +1,56 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NESO Data Portal Datastore Search API",
+    "version": "3"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Search",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search datasets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.neso.energy/api/3/action/package_search",
+            "params": [
+              {
+                "name": "q",
+                "value": "",
+                "type": "query",
+                "description": "Search query string."
+              }
+            ]
+          },
+          "docs": "Searches datasets by query criteria."
+        },
+        {
+          "info": {
+            "name": "Search resources",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.neso.energy/api/3/action/resource_search",
+            "params": [
+              {
+                "name": "q",
+                "value": "",
+                "type": "query",
+                "description": "Search query string."
+              }
+            ]
+          },
+          "docs": "Searches data files (resources) by query criteria."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

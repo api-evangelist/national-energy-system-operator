@@ -1,0 +1,196 @@
+{
+  "item": [
+    {
+      "id": "b3589b96-5685-4a8c-9ac9-98738ef33e6f",
+      "name": "Metadata",
+      "description": {
+        "content": "Retrieve metadata for datasets and resources.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "398069f4-cbd5-4338-b565-ee0aa0ac0531",
+          "name": "Show dataset",
+          "request": {
+            "name": "Show dataset",
+            "description": {
+              "content": "Returns the details of a single dataset.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "package_show"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "<string>",
+                  "description": "(Required) Dataset identifier or slug."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d8c8e4e5-4c96-4958-a6b9-b2c22709ec5e",
+              "name": "Dataset details.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "package_show"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"help\": \"string\",\n  \"success\": false,\n  \"result\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "90e7e2d4-0e66-4476-b39c-e3cd2f0cfb4c",
+          "name": "Show resource",
+          "request": {
+            "name": "Show resource",
+            "description": {
+              "content": "Returns metadata for a single resource, including modification date for change-detection.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "resource_show"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "<string>",
+                  "description": "(Required) Resource identifier (UUID)."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "df639e2d-f09e-4bee-b06e-3f4b57572cd6",
+              "name": "Resource metadata.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "resource_show"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"help\": \"string\",\n  \"success\": false,\n  \"result\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.neso.energy/api/3/action",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "f7420bc6-e401-457a-b904-fe1e83f31f65",
+    "name": "NESO Data Portal Datastore Metadata API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The National Energy System Operator (NESO) Data Portal API is a CKAN v3 API providing programmatic access to NESO datasets including wind forecasts, demand predictions, balancing services, transmission constraints, and other UK energy system data. Rate limits: maximum 1 request per second for the CKAN API and 2 requests per minute for the Datastore API.\n\nContact Support:\n Name: NESO Data Portal",
+      "type": "text/plain"
+    }
+  }
+}

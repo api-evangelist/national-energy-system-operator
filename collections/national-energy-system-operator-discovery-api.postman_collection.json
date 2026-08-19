@@ -1,0 +1,242 @@
+{
+  "item": [
+    {
+      "id": "a41da34f-e608-4d18-b8da-73438efaea9c",
+      "name": "Discovery",
+      "description": {
+        "content": "Discovery endpoints for organizations, datasets, and tags.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "25d715ae-2db1-4609-9982-b3a34ac47242",
+          "name": "List data groups",
+          "request": {
+            "name": "List data groups",
+            "description": {
+              "content": "Returns a list of all data groups (CKAN organizations) on the NESO Data Portal.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "organization_list"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "93d563d9-cdca-4682-b51e-a7ae03d8140e",
+              "name": "List of organizations.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "organization_list"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"help\": \"string\",\n  \"success\": false,\n  \"result\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "92ca639a-2e07-4210-86d6-c24c9a6a7b15",
+          "name": "List datasets",
+          "request": {
+            "name": "List datasets",
+            "description": {
+              "content": "Returns a list of all datasets (CKAN packages) on the NESO Data Portal.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "package_list"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "706590f7-cd4b-4fd6-8ce6-502944fcf3a0",
+              "name": "List of dataset identifiers.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "package_list"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"help\": \"string\",\n  \"success\": false,\n  \"result\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9d5960e1-d0ab-460f-9b9b-0dbabc825a41",
+          "name": "List tags",
+          "request": {
+            "name": "List tags",
+            "description": {
+              "content": "Returns a list of available tags on the NESO Data Portal.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "tag_list"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b3a38cbe-71b6-438a-b73e-5f3d04b04a02",
+              "name": "List of tags.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tag_list"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"help\": \"string\",\n  \"success\": false,\n  \"result\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.neso.energy/api/3/action",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "42a0202d-79e5-4405-aca7-79f43e220374",
+    "name": "NESO Data Portal Datastore Discovery API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The National Energy System Operator (NESO) Data Portal API is a CKAN v3 API providing programmatic access to NESO datasets including wind forecasts, demand predictions, balancing services, transmission constraints, and other UK energy system data. Rate limits: maximum 1 request per second for the CKAN API and 2 requests per minute for the Datastore API.\n\nContact Support:\n Name: NESO Data Portal",
+      "type": "text/plain"
+    }
+  }
+}

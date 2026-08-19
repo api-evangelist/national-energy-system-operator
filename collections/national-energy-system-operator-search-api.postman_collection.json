@@ -1,0 +1,196 @@
+{
+  "item": [
+    {
+      "id": "dbc493a4-e949-46d6-82ea-f798b1a8488b",
+      "name": "Search",
+      "description": {
+        "content": "Search endpoints for datasets and resources.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "59966c1a-bffe-4c20-8138-253fb5af2b1d",
+          "name": "Search datasets",
+          "request": {
+            "name": "Search datasets",
+            "description": {
+              "content": "Searches datasets by query criteria.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "package_search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "q",
+                  "value": "<string>",
+                  "description": "(Required) Search query string."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "44fea657-43a2-4fbd-bdb6-131451ba757c",
+              "name": "Matching datasets.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "package_search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"help\": \"string\",\n  \"success\": false,\n  \"result\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3e5bfe07-2a00-4cac-ab0b-cbfb665c0176",
+          "name": "Search resources",
+          "request": {
+            "name": "Search resources",
+            "description": {
+              "content": "Searches data files (resources) by query criteria.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "resource_search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "q",
+                  "value": "<string>",
+                  "description": "(Required) Search query string."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "86cf4015-783d-4a6c-97a5-f36cd0f72540",
+              "name": "Matching resources.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "resource_search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"help\": \"string\",\n  \"success\": false,\n  \"result\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.neso.energy/api/3/action",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "f513f1c1-506d-483f-b210-1add9e5fdbdf",
+    "name": "NESO Data Portal Datastore Search API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The National Energy System Operator (NESO) Data Portal API is a CKAN v3 API providing programmatic access to NESO datasets including wind forecasts, demand predictions, balancing services, transmission constraints, and other UK energy system data. Rate limits: maximum 1 request per second for the CKAN API and 2 requests per minute for the Datastore API.\n\nContact Support:\n Name: NESO Data Portal",
+      "type": "text/plain"
+    }
+  }
+}

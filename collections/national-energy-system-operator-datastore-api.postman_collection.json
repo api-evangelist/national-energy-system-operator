@@ -1,0 +1,226 @@
+{
+  "item": [
+    {
+      "id": "2b0a2114-f13a-4dad-bb83-4c841e5fd212",
+      "name": "Datastore",
+      "description": {
+        "content": "Query tabular data with filters or PostgreSQL-style SQL.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "46cc9758-bebb-48f4-b5f6-c2d3abaf4092",
+          "name": "Query tabular data",
+          "request": {
+            "name": "Query tabular data",
+            "description": {
+              "content": "Queries the datastore for tabular records with optional filters and pagination.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "datastore_search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "resource_id",
+                  "value": "<string>",
+                  "description": "(Required) Resource identifier whose datastore is being queried."
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "100",
+                  "description": "Maximum number of records to return."
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "0",
+                  "description": "Offset into the result set."
+                },
+                {
+                  "disabled": false,
+                  "key": "q",
+                  "value": "<string>",
+                  "description": "Free-text query against indexed fields."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e635e98f-f05a-498e-aa4c-003f52829485",
+              "name": "Datastore records.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "datastore_search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "resource_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "100"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"help\": \"string\",\n  \"success\": true,\n  \"result\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ddbe148d-892f-402a-bd01-2d0ad6408640",
+          "name": "Query datastore via SQL",
+          "request": {
+            "name": "Query datastore via SQL",
+            "description": {
+              "content": "Queries the datastore using PostgreSQL syntax. Field IDs and Resource IDs must be enclosed in double quotes.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "datastore_search_sql"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "sql",
+                  "value": "<string>",
+                  "description": "(Required) PostgreSQL-syntax SQL query."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "338618e1-c126-4ada-bbb5-e6e055413437",
+              "name": "SQL query results.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "datastore_search_sql"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "sql",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"help\": \"string\",\n  \"success\": true,\n  \"result\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.neso.energy/api/3/action",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "bf2405e9-e530-4a9d-835a-28b209c53904",
+    "name": "NESO Data Portal Datastore API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The National Energy System Operator (NESO) Data Portal API is a CKAN v3 API providing programmatic access to NESO datasets including wind forecasts, demand predictions, balancing services, transmission constraints, and other UK energy system data. Rate limits: maximum 1 request per second for the CKAN API and 2 requests per minute for the Datastore API.\n\nContact Support:\n Name: NESO Data Portal",
+      "type": "text/plain"
+    }
+  }
+}

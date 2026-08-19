@@ -1,0 +1,51 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NESO Data Portal Datastore Discovery API",
+    "version": "3"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Discovery",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List data groups",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.neso.energy/api/3/action/organization_list"
+          },
+          "docs": "Returns a list of all data groups (CKAN organizations) on the NESO Data Portal."
+        },
+        {
+          "info": {
+            "name": "List datasets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.neso.energy/api/3/action/package_list"
+          },
+          "docs": "Returns a list of all datasets (CKAN packages) on the NESO Data Portal."
+        },
+        {
+          "info": {
+            "name": "List tags",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.neso.energy/api/3/action/tag_list"
+          },
+          "docs": "Returns a list of available tags on the NESO Data Portal."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,56 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NESO Data Portal Datastore Metadata API",
+    "version": "3"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Metadata",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Show dataset",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.neso.energy/api/3/action/package_show",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "query",
+                "description": "Dataset identifier or slug."
+              }
+            ]
+          },
+          "docs": "Returns the details of a single dataset."
+        },
+        {
+          "info": {
+            "name": "Show resource",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.neso.energy/api/3/action/resource_show",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "query",
+                "description": "Resource identifier (UUID)."
+              }
+            ]
+          },
+          "docs": "Returns metadata for a single resource, including modification date for change-detection."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
