@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: NESO Data Portal Datastore Search API
+  title: NESO Data Portal Search API
   description: 'The National Energy System Operator (NESO) Data Portal API is a CKAN v3 API providing programmatic access to NESO datasets including wind forecasts, demand predictions, balancing services, transmission constraints, and other UK energy system data. Rate limits: maximum 1 request per second for the CKAN API and 2 requests per minute for the Datastore API.'
   version: '3'
   contact:
